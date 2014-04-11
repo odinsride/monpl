@@ -1,0 +1,27 @@
+Prompt Table RFSH_STATUS_RPT;
+CREATE TABLE monpl_status
+(
+  LOG_ID           NUMBER                       NOT NULL,
+  BUILD_ID         NUMBER,
+  BUILD_DATE       DATE,
+  LOG_LEVEL        VARCHAR2(5 BYTE),
+  PROGRAM          VARCHAR2(250 BYTE),
+  PROCESS          VARCHAR2(250 BYTE),
+  MSG              VARCHAR2(4000 BYTE),
+  STATUS           VARCHAR2(100 BYTE),
+  START_TIME       DATE,
+  END_TIME         DATE,
+  MIN_ELAPSED      NUMBER,
+  ROWCOUNT         NUMBER
+);
+
+Prompt Synonym RFSH_STATUS_RPT;
+CREATE OR REPLACE PUBLIC SYNONYM RFSH_STATUS_RPT FOR EDSL_PROC_FND.RFSH_STATUS_RPT;
+
+
+Prompt Non-Foreign Key Constraints on Table RFSH_STATUS_RPT;
+ALTER TABLE monpl_status ADD (
+  CONSTRAINT monpl_status_pk
+  PRIMARY KEY
+  (LOG_ID)
+);

@@ -1,0 +1,5 @@
+Interactive install script
+- Default Schema or Existing Schema?
+- 
+
+Purge Function

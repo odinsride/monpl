@@ -1,0 +1,1 @@
+CREATE SEQUENCE monpl_status_seq;
